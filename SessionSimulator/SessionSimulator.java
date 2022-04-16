@@ -1,9 +1,3 @@
-<<<<<<< Updated upstream
-public class SessionSimulator {
-    private Customer[] customers;
-    private Provider[] providers;
-    private Session[] sessions;
-=======
 package SessionSimulator;
 
 import java.util.HashMap;
@@ -39,5 +33,4 @@ public class SessionSimulator {
 
 
     }
->>>>>>> Stashed changes
 }
