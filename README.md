@@ -6,8 +6,11 @@
 С помощью МНК анализируется $\Delta P$ за несколько последних $\Delta t$ (параметризуется)
 
 1. найдем средние значения точек
-> $<\!t\!> \; = \; \frac{1}{n}\sum{t_i} $ <br>
-> $<\!P\!> \; = \; \frac{1}{n}\sum{P_i}$
+> <img src="https://latex.codecogs.com/gif.latex?O_t=\text { $<\!t\!> \; = \; \frac{1}{n}\sum{t_i}$  } t " /> 
+
+> <img src="https://latex.codecogs.com/gif.latex?O_t=\text { $<\!P\!> \; = \; \frac{1}{n}\sum{P_i}$ } t " /> 
+
 2. найдем коэффициенты линейной зависимости $y=kx+b$
-> $k \; = \; \frac{\sum{(t_i - <t>)(P_i - <P>)}}{\sum{(t_i - <t>)^2}}$ <br>
-> $b \; = \; <\!P\!>-k<\!t\!>$
+> <img src="https://latex.codecogs.com/gif.latex?O_t=\text { $k \; = \; \frac{\sum{(t_i - <t>)(P_i - <P>)}}{\sum{(t_i - <t>)^2}}$ } t " /> 
+
+> <img src="https://latex.codecogs.com/gif.latex?O_t=\text { $b \; = \; <\!P\!>-k<\!t\!>$ } t " /> 
