@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 package SessionSimulator;
 
 import java.util.Vector;
@@ -67,4 +65,3 @@ public class Session {
         return this.name;
     }
 }
->>>>>>> Stashed changes
