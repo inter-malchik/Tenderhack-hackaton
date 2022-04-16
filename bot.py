@@ -1,4 +1,6 @@
 import telebot
+from db import *
+
 
 class User:
     def __init__(self, name, chat_id):
@@ -33,6 +35,8 @@ sessions_buttons = ['Активные сессии', 'История сесси�
 back_buttons = ['Вернуться назад']
 
 users = {}
+engine = create_engine('sqlite:///:memory:', echo=True)
+
 
 
 main_markup = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True,one_time_keyboard=True)
