@@ -1,23 +1,28 @@
 package SessionSimulator;
 
+import java.util.Vector;
+
 public class Session {
-    Person customer;
-    Person[] participants;
-    Person winner; // or an id of a winner in participants array
+    public Customer customer;
+    public Vector<Provider> providers;
+    public Person winner; // or an id of a winner in participants array
 
-    int maxValue; // max price the customer can offer
-    int curValue;
-    int percent; // min percent on which the deal can be lessen
+    public int maxValue; // max price the customer can offer
+    public int curValue;
+    public int percent; // min percent on which the deal can be lessen
 
-    int time;
-    int leftTime;
-    Session(Person customer, Person[] participants, int maxValue, int curValue, int percent, int time) {
+    public int time;
+    public int leftTime;
+    public Session(Customer customer, int maxValue, int percent, int time) {
         this.customer = customer;
-        this.participants = participants;
         this.maxValue = maxValue;
-        this.curValue = curValue;
         this.percent = percent;
         this.time = time;
         this.leftTime = time;
+    }
+
+    public void add(Provider provider, int curValue) {
+        providers.add(provider);
+        this.curValue = curValue;
     }
 }
