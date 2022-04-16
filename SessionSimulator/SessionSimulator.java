@@ -10,11 +10,16 @@ public class SessionSimulator {
 
     public static void main(String[] args) {
         Customer Ivan = new Customer("Ivan");
-        Session tender = new Session("IS", Ivan, 100, 1, 3);
+        Provider Alex = new Provider("Alex");
+        Provider Leo = new Provider("Leo");
+        Session tender = new Session("IS", Ivan, 100, 1, 2);
+        System.out.println(tender.name + " " + tender.customer + " " + tender.curValue);
+        tender.add(Alex, 50);
+        tender.add(Leo, 45);
         System.out.println(Ivan.name + " " + Ivan.password);
         System.out.println(tender.name + " " + tender.customer + " " + tender.curValue);
-        while ((System.currentTimeMillis() - tender.startTime) / 1000 / 60 < 3) {}
+        while ((System.currentTimeMillis() - tender.startTime) / 1000 / 60 < tender.sessionTime) {}
         Ivan.del(tender);
-        System.out.println("deleted");
+        System.out.println(tender.curValue + " " + tender.winner);
     }
 }

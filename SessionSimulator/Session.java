@@ -4,7 +4,7 @@ import java.util.Vector;
 
 public class Session {
     long startTime;
-    long time; // minutes
+    long sessionTime; // minutes
 
     String name;
     public Customer customer;
@@ -17,7 +17,7 @@ public class Session {
 
     public Session(String name, Customer customer, double maxValue, double percent, long time) {
         startTime = System.currentTimeMillis();
-        this.time = time;
+        this.sessionTime = time;
         this.name = name;
         this.curValue = maxValue;
         this.customer = customer;
@@ -27,15 +27,19 @@ public class Session {
     }
 
     public void add(Provider provider, int curValue) {
-        if (curValue > this.curValue - percent * maxValue / 100) {
+        if (curValue > this.curValue - percent * maxValue / 100 || provider == winner) {
             return;
         }
-        if (!providers.contains(provider)) {
+        if (providers != null && !providers.contains(provider)) {
             providers.add(provider);
             provider.add(this);
         }
         winner = provider;
         this.curValue = curValue;
+        if (((startTime + sessionTime * 1000 * 60) - System.currentTimeMillis()) / 1000 / 60 < 1) {
+            System.out.println((sessionTime - System.currentTimeMillis()) / 1000 / 60);
+            sessionTime += 1000 * 60; // 1000 ms * 60 = 60s = 1m
+        }
     }
 
     public void end() {
