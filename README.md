@@ -6,11 +6,11 @@
 С помощью МНК анализируется $\Delta P$ за несколько последних $\Delta t$ (параметризуется)
 
 1. найдем средние значения точек
-> <img src="https://latex.codecogs.com/gif.latex?O_t=\text { $<\!t\!> \; = \; \frac{1}{n}\sum{t_i}$  } t " /> 
+> <img src="https://render.githubusercontent.com/render/math?math=t^{mid}=\frac{1}{n}\sum{t_i}">
 
-> <img src="https://latex.codecogs.com/gif.latex?O_t=\text { $<\!P\!> \; = \; \frac{1}{n}\sum{P_i}$ } t " /> 
+> <img src="https://render.githubusercontent.com/render/math?math=t^{mid}=\frac{1}{n}\sum{P_i}">
+2. найдем коэффициенты линейной зависимости y = kx + b
 
-2. найдем коэффициенты линейной зависимости $y=kx+b$
-> <img src="https://latex.codecogs.com/gif.latex?O_t=\text { $k \; = \; \frac{\sum{(t_i - <t>)(P_i - <P>)}}{\sum{(t_i - <t>)^2}}$ } t " /> 
+> <img src="https://render.githubusercontent.com/render/math?math=k=\frac{\sum{(t_i-t^{mid})(P_i-P^{mid})}}{\sum{(t_i-t^{mid})^2}}">
 
-> <img src="https://latex.codecogs.com/gif.latex?O_t=\text { $b \; = \; <\!P\!>-k<\!t\!>$ } t " /> 
+> <img src="https://render.githubusercontent.com/render/math?math=b=P{mid}-k*t^{mid}">
