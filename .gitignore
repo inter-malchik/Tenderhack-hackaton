@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+/.idea/
+/SessionSimulator/Test.java
+/out/
+/Tenderhack-hackaton.iml
