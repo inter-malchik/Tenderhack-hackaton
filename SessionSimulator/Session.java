@@ -8,7 +8,8 @@ public class Session {
 
     String name;
     public Customer customer;
-    public Vector<Provider> providers = new Vector<Provider>();
+    public Vector<Provider> providers = new Vector<>();
+    public Vector<Double> historyBets = new Vector<>();
     public Provider winner; // or an id of a winner in participants array
 
     public double maxValue; // max price
@@ -34,7 +35,8 @@ public class Session {
             providers.add(provider);
             provider.add(this);
         }
-        if (curValue - maxValue * percent / 100 < 1) {
+        historyBets.add(curValue);
+        if (curValue - maxValue * percent / 100 < 0.01) {
             this.end();
             return;
         }
