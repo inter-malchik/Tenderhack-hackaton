@@ -17,10 +17,6 @@ public class PasswordGenerator {
 
     private static SecureRandom random = new SecureRandom();
 
-    public static void main(String[] args) {
-        generateStrongPassword();
-    }
-
     public static String generateStrongPassword() {
 
         StringBuilder result = new StringBuilder(PASSWORD_LENGTH);
@@ -64,3 +60,5 @@ public class PasswordGenerator {
         return result.toString();
     }
 }
+
+// https://javascopes.com/java-password-generator-example-0730d1e5/

@@ -4,8 +4,8 @@ import java.util.Vector;
 
 public class Person {
     String name;
-    Vector<Session> current;
-    Vector<Session> history;
+    Vector<Session> current = new Vector<>();
+    Vector<Session> history = new Vector<>();
     String password = PasswordGenerator.generateStrongPassword();
 
     Person(String name) {
@@ -21,5 +21,11 @@ public class Person {
             return;
         }
         current.remove(session);
+        history.add(session);
+    }
+
+    @Override
+    public String toString() {
+        return name;
     }
 }
