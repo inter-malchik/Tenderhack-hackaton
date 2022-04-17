@@ -4,8 +4,8 @@ from math import exp
 def find_koefficient(cur_rate, delta_rate, delta_time,  min_total_rate, delta_min_total_rate):
 
     # нормировка скорости убывания
-    v_total_min_rate = ((delta_min_total_rate * 100) / min_total_rate) / delta_time
-    v_cur_rate = ((delta_rate * 100) / cur_rate) / delta_time
+    v_total_min_rate = (delta_min_total_rate / min_total_rate) / delta_time
+    v_cur_rate = (delta_rate / cur_rate) / delta_time
     v_norm = 1 - exp(1 - v_cur_rate / v_total_min_rate)
 
     # нормировка цены
