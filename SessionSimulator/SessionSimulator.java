@@ -2,10 +2,27 @@ package SessionSimulator;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Vector;
+import java.sql.*;
 
 public class SessionSimulator {
-    public static void main(String[] args) {
+    public static final String DB_Driver = "org.postgresql.Driver";
+    public static final String DB_URL = "jdbc:h2:/c:/JavaPrj/SQLDemo/db/stockExchange";
+
+    public static void main(String[] args) throws ClassNotFoundException {
+        try {
+            Class.forName(DB_Driver); //Проверяем наличие JDBC драйвера для работы с БД
+            Connection connection = DriverManager.getConnection(DB_URL);//соединениесБД
+            System.out.println("Соединение с СУБД выполнено.");
+            connection.close();       // отключение от БД
+            System.out.println("Отключение от СУБД выполнено.");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace(); // обработка ошибки  Class.forName
+            System.out.println("JDBC драйвер для СУБД не найден!");
+        } catch (SQLException e) {
+            e.printStackTrace(); // обработка ошибок  DriverManager.getConnection
+            System.out.println("Ошибка SQL !");
+        }
+
         Map<String, Person> tokens = new HashMap<>();
 
         Customer Ivan = new Customer("Ivan");

@@ -3,12 +3,12 @@ package SessionSimulator;
 import java.util.Vector;
 
 public class Person {
-    String name;
-    Vector<Session> current = new Vector<>();
-    Vector<Session> history = new Vector<>();
-    String password = PasswordGenerator.generateStrongPassword();
+    public String name;
+    public Vector<Session> current = new Vector<>();
+    public Vector<Session> history = new Vector<>();
+    public String password = PasswordGenerator.generateStrongPassword();
 
-    Person(String name) {
+    public Person(String name) {
         this.name = name;
     }
 

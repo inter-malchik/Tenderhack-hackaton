@@ -6,7 +6,7 @@ public class Session {
     long startTime;
     long sessionTime; // minutes
 
-    String name;
+    public String name;
     public Customer customer;
     public Vector<Provider> providers = new Vector<>();
     public Vector<Double> historyBets = new Vector<>();
@@ -43,7 +43,7 @@ public class Session {
         curValue -= maxValue * percent / 100;
         winner = provider;
         if (((startTime + sessionTime * 1000 * 60) - System.currentTimeMillis()) / 1000 / 60 < 1) {
-            System.out.println((sessionTime - System.currentTimeMillis()) / 1000 / 60);
+            System.out.println((startTime + sessionTime * 1000 * 60 - System.currentTimeMillis()) / 1000 / 60);
             sessionTime++; // 1000 ms * 60 = 60s = 1m
         }
     }
