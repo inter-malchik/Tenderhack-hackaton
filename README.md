@@ -1,10 +1,10 @@
 
 # Tenderhack Hackaton
-Making a service to automate participation in tender sessions
+### Making a service to automate participation in tender sessions
 <br>
 
 # Цель и задачи
-## Создать сервис для автоматизации участия в котировочных сессиях.
+### Создать сервис для автоматизации участия в котировочных сессиях.
 <br>
 
 # В рамках хакатона реализовывали такие задачи, как:
