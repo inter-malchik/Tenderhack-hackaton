@@ -13,4 +13,4 @@
 
 > <img src="https://render.githubusercontent.com/render/math?math=k=\frac{\sum{(t_i-t^{mid})(P_i-P^{mid})}}{\sum{(t_i-t^{mid})^2}}">
 
-> <img src="https://render.githubusercontent.com/render/math?math=b=P{mid}-k*t^{mid}">
+> <img src="https://render.githubusercontent.com/render/math?math=b=P^{mid}-k*t^{mid}">
